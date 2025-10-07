@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Tugas3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan nomor punggung: ");
+        int nomor = input.nextInt();
+
+        System.out.println("\nPosisi pemain berdasarkan nomor punggung:");
+
+        // Cek nomor genap
+        if (nomor % 2 == 0) {
+            System.out.println("- Target Attacker");
+        }
+
+        // Cek nomor genap antara 50 - 100
+        if (nomor % 2 == 0 && nomor >= 50 && nomor <= 100) {
+            System.out.println("- Berhak dipilih menjadi Captain Team");
+        }
+
+        // Cek nomor ganjil
+        if (nomor % 2 != 0) {
+            System.out.println("- Defender");
+        }
+
+        // Cek nomor ganjil lebih dari 90
+        if (nomor % 2 != 0 && nomor > 90) {
+            System.out.println("- Playmaker");
+        }
+
+        // Cek nomor ganjil kelipatan 3 dan 5
+        if (nomor % 2 != 0 && nomor % 3 == 0 && nomor % 5 == 0) {
+            System.out.println("- Keeper");
+        }
+
+        input.close();
+    }
+}
